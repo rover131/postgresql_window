@@ -2,10 +2,8 @@ import psycopg2
 from tkinter import *
 from tkinter import messagebox as mb
 import tkinter.ttk as ttk
-# e = []
 
 
-# ---------------seller start-------------------------------------
 def insert_product_sql():
     data = [e[i].get() for i in range(8)]
     cursor.execute(f"call insert_product({int(data[0])}, '{(data[1])}',"
@@ -80,7 +78,7 @@ def reserve_product_screen():
     global e
     root_func = Tk()
 
-    ## -----------------------create widgets----------------------------------------------------------------
+    # -----------------------create widgets----------------------------------------------------------------
     l0 = Label(root_func, text='Заполните данные').grid(row=0, column=0)
     l1 = Label(root_func, text='id товара').grid(row=1, column=0)
 
@@ -142,9 +140,6 @@ def service_info_screen_sql():
     for i in cursor:
         table.insert("", END, values=tuple(i))
     connection.commit()
-
-
-# ---------------seller end-------------------------------------
 
 
 # Подключение к существующей базе данных

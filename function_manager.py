@@ -213,13 +213,6 @@ def client_info_screen_sql():
     connection.commit()
 
 
-
-
-
-
-
-
-
 # Подключение к существующей базе данных
 connection = psycopg2.connect(dbname='tr_bog',
                               user="postgres",
