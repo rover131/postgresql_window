@@ -19,8 +19,6 @@ def insert_product_sql():
 def insert_product_screen():
     global e
     root_func = Tk()
-    root_func.attributes("-topmost", True)
-    root_func.lift()
 
     # -----------------------create widgets----------------------------------------------------------------
     l0 = Label(root_func, text='Заполните данные').grid(row=0, column=0)
@@ -53,8 +51,6 @@ def insert_contract_p_sql():
 def insert_contract_p_screen():
     global e
     root_func = Tk()
-    root_func.attributes("-topmost", True)
-    root_func.lift()
 
     # -----------------------create widgets----------------------------------------------------------------
     l0 = Label(root_func, text='Заполните данные').grid(row=0, column=0)
@@ -83,8 +79,6 @@ def reserve_product_sql():
 def reserve_product_screen():
     global e
     root_func = Tk()
-    root_func.attributes("-topmost", True)
-    root_func.lift()
 
     ## -----------------------create widgets----------------------------------------------------------------
     l0 = Label(root_func, text='Заполните данные').grid(row=0, column=0)

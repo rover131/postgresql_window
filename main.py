@@ -54,7 +54,7 @@ def man_screen():
     but_contract_info = Button(root_man, width=40, text='Список контрактов для своего магазина', bg='#9ba0ab',
                                command=contract_info_screen)
     but_client_info = Button(root_man, width=40, text='Список клиентов', bg='#9ba0ab',
-                             command=client_info_screen)
+                             command=client_info_screen_sql)
     but_service_info = Button(root_man, width=40, text='Список услуг ', bg='#9ba0ab',
                               command=service_info_screen_sql)  # from seller
     but_product_info = Button(root_man, width=40, text='Список продуктов ', bg='#9ba0ab',
@@ -110,11 +110,11 @@ def dir_screen():
     but_employs_info = Button(root_dir, width=40, text='Список контрактов для своего магазина', bg='#9ba0ab',
                               command=employs_info_screen)
     but_client_info = Button(root_dir, width=40, text='Список клиентов', bg='#9ba0ab',
-                             command=client_info_screen)  # from manager
+                             command=client_info_screen_sql)  # from manager
     but_service_info = Button(root_dir, width=40, text='Список услуг ', bg='#9ba0ab',
-                              command=service_info_screen)  # from seller
+                              command=service_info_screen_sql)  # from seller
     but_product_info = Button(root_dir, width=40, text='Список продуктов ', bg='#9ba0ab',
-                              command=product_info_screen)  # from seller
+                              command=product_info_screen_sql)  # from seller
     # -----------------------create widgets----------------------------------------------------------------
 
     # put widgets
