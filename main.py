@@ -7,6 +7,7 @@ from function_director import *
 # screen seller
 def seller_screen():
     root_sale = Tk()
+    root_sale.title('Продавец')
 
     # -----------------------create widgets----------------------------------------------------------------
     lab_start1 = Label(root_sale, width=40, text="Что нужно сделать?")
@@ -36,6 +37,7 @@ def seller_screen():
 # screen manager
 def man_screen():
     root_man = Tk()
+    root_man.title('Менеджер')
 
     # -----------------------create widgets----------------------------------------------------------------
     lab_start1 = Label(root_man, width=40, text="Что нужно сделать?")
@@ -57,7 +59,7 @@ def man_screen():
                              command=client_info_screen_sql)
     but_service_info = Button(root_man, width=40, text='Список услуг ', bg='#9ba0ab',
                               command=service_info_screen_sql)  # from seller
-    but_product_info = Button(root_man, width=40, text='Список продуктов ', bg='#9ba0ab',
+    but_product_info = Button(root_man, width=40, text='Список товаров ', bg='#9ba0ab',
                               command=product_info_screen_sql)  # from seller
     # -----------------------create widgets----------------------------------------------------------------
 
@@ -79,6 +81,7 @@ def man_screen():
 # screen director
 def dir_screen():
     root_dir = Tk()
+    root_dir.title('Директор')
 
     # -----------------------create widgets----------------------------------------------------------------
     lab_start1 = Label(root_dir, width=40, text="Что нужно сделать?")
@@ -139,12 +142,13 @@ def dir_screen():
 
 
 root = Tk()  # create window
+root.title('Главное меню')
 
 # create widgets
 greetings = Label(width=40, text="Приветствую вас!\nВыберите вашу должность")
-sale_button = Button(text="Продавец", command=seller_screen)
-men_button = Button(text="Менеджер", command=man_screen)
-dir_button = Button(text="Директор", command=dir_screen)
+sale_button = Button(text="Продавец", width=40, command=seller_screen)
+men_button = Button(text="Менеджер", width=40, command=man_screen)
+dir_button = Button(text="Директор", width=40, command=dir_screen)
 
 # put widgets
 greetings.pack()

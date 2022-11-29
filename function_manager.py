@@ -16,17 +16,18 @@ def insert_client_sql():
 def insert_client_screen():
     global e
     root_func = Tk()
+    root_func.title('Добавление клиента')
 
     # -----------------------create widgets----------------------------------------------------------------
-    l0 = Label(root_func, text='Заполните данные').grid(row=0, column=0)
-    l1 = Label(root_func, text='id клиента').grid(row=1, column=0)
-    l2 = Label(root_func, text='ФИО клиента').grid(row=2, column=0)
-    l3 = Label(root_func, text='email').grid(row=3, column=0)
+    l0 = Label(root_func, width=20, text='Заполните данные').grid(row=0, column=0)
+    l1 = Label(root_func, width=20, text='id клиента').grid(row=1, column=0)
+    l2 = Label(root_func, width=20, text='ФИО клиента').grid(row=2, column=0)
+    l3 = Label(root_func, width=20, text='email').grid(row=3, column=0)
 
     e = [None for i in range(3)]
     for i in range(0, 3):
-        e[i] = Entry(root_func)
-    b0 = Button(root_func, text='Добавить', command=insert_client_sql).grid(row=4, column=1)
+        e[i] = Entry(root_func, width=40)
+    b0 = Button(root_func, width=40, text='Добавить', command=insert_client_sql).grid(row=4, column=1)
 
     for i in range(0, 3):
         e[i].grid(row=i + 1, column=1)
@@ -44,18 +45,19 @@ def insert_contract_u_sql():
 def insert_contract_u_screen():
     global e
     root_func = Tk()
+    root_func.title('Добавление контракта по услуге')
 
     # -----------------------create widgets----------------------------------------------------------------
-    l0 = Label(root_func, text='Заполните данные').grid(row=0, column=0)
-    l1 = Label(root_func, text='id контракта').grid(row=1, column=0)
-    l2 = Label(root_func, text='id клиента').grid(row=2, column=0)
-    l3 = Label(root_func, text='id сотрудника').grid(row=3, column=0)
-    l4 = Label(root_func, text='id услуги').grid(row=4, column=0)
+    l0 = Label(root_func, width=20, text='Заполните данные').grid(row=0, column=0)
+    l1 = Label(root_func, width=20, text='id контракта').grid(row=1, column=0)
+    l2 = Label(root_func, width=20, text='id клиента').grid(row=2, column=0)
+    l3 = Label(root_func, width=20, text='id сотрудника').grid(row=3, column=0)
+    l4 = Label(root_func, width=20, text='id услуги').grid(row=4, column=0)
 
     e = [None for i in range(4)]
     for i in range(0, 4):
-        e[i] = Entry(root_func)
-    b0 = Button(root_func, text='Добавить', command=insert_contract_u_sql).grid(row=9, column=1)
+        e[i] = Entry(root_func, width=40)
+    b0 = Button(root_func, width=40, text='Добавить', command=insert_contract_u_sql).grid(row=9, column=1)
 
     for i in range(0, 4):
         e[i].grid(row=i + 1, column=1)
@@ -75,17 +77,18 @@ def status_contract_sql():
 def status_contract_screen():
     global e
     root_func = Tk()
+    root_func.title('Изменение статуса контракта')
 
     # -----------------------create widgets----------------------------------------------------------------
-    l0 = Label(root_func, text='Заполните данные').grid(row=0, column=0)
-    l1 = Label(root_func, text='id контракта').grid(row=1, column=0)
-    l2 = Label(root_func, text='Статус оплаты(1-опл, 0-нет)').grid(row=2, column=0)
-    l3 = Label(root_func, text='Статус выполнения(1-опл, 0-нет)').grid(row=3, column=0)
+    l0 = Label(root_func, width=30, text='Заполните данные').grid(row=0, column=0)
+    l1 = Label(root_func, width=30, text='id контракта').grid(row=1, column=0)
+    l2 = Label(root_func, width=30, text='Статус оплаты(1-опл, 0-нет)').grid(row=2, column=0)
+    l3 = Label(root_func, width=30, text='Статус выполнения(1-опл, 0-нет)').grid(row=3, column=0)
 
     e = [None for i in range(3)]
     for i in range(0, 3):
-        e[i] = Entry(root_func)
-    b0 = Button(root_func, text='Добавить', command=status_contract_sql).grid(row=4, column=1)
+        e[i] = Entry(root_func, width=40)
+    b0 = Button(root_func, width=40, text='Добавить', command=status_contract_sql).grid(row=4, column=1)
 
     for i in range(0, 3):
         e[i].grid(row=i + 1, column=1)
@@ -102,16 +105,17 @@ def insert_service_sql():
 def insert_service_screen():
     global e
     root_func = Tk()
+    root_func.title('Добавление услуги')
 
     # -----------------------create widgets----------------------------------------------------------------
-    l0 = Label(root_func, text='Заполните данные').grid(row=0, column=0)
-    l1 = Label(root_func, text='id услуги').grid(row=1, column=0)
-    l2 = Label(root_func, text='Название услуги').grid(row=2, column=0)
+    l0 = Label(root_func, width=20, text='Заполните данные').grid(row=0, column=0)
+    l1 = Label(root_func, width=20, text='id услуги').grid(row=1, column=0)
+    l2 = Label(root_func, width=20, text='Название услуги').grid(row=2, column=0)
 
     e = [None for i in range(2)]
     for i in range(0, 2):
-        e[i] = Entry(root_func)
-    b0 = Button(root_func, text='Добавить', command=insert_service_sql).grid(row=3, column=1)
+        e[i] = Entry(root_func, width=40)
+    b0 = Button(root_func, width=40, text='Добавить', command=insert_service_sql).grid(row=3, column=1)
 
     for i in range(0, 2):
         e[i].grid(row=i + 1, column=1)
@@ -128,15 +132,16 @@ def delete_service_sql():
 def delete_service_screen():
     global e
     root_func = Tk()
+    root_func.title('Удаление услуги')
 
     # -----------------------create widgets----------------------------------------------------------------
-    l0 = Label(root_func, text='Заполните данные').grid(row=0, column=0)
-    l1 = Label(root_func, text='id услуги').grid(row=1, column=0)
+    l0 = Label(root_func, width=20, text='Заполните данные').grid(row=0, column=0)
+    l1 = Label(root_func, width=20, text='id услуги').grid(row=1, column=0)
 
     e = [None for i in range(1)]
     for i in range(0, 1):
-        e[i] = Entry(root_func)
-    b0 = Button(root_func, text='Удалить', command=delete_service_sql).grid(row=2, column=1)
+        e[i] = Entry(root_func, width=40)
+    b0 = Button(root_func, width=40, text='Удалить', command=delete_service_sql).grid(row=2, column=1)
 
     for i in range(0, 1):
         e[i].grid(row=i + 1, column=1)
@@ -177,9 +182,9 @@ def contract_info_sql():
 def contract_info_screen():
     global e
     root_func = Tk()
-
+    root_func.title('Список контрактов')
     # -----------------------create widgets----------------------------------------------------------------
-    # l0 = Label(root_func, text='Заполните данные').grid(row=0, column=0)
+
     l1 = Label(root_func, text='Ваш id ').grid(row=1, column=0)
 
     e = [None for i in range(1)]
@@ -192,10 +197,12 @@ def contract_info_screen():
 
 
 def client_info_screen_sql():
-    prod_root = Tk()
+    root_func = Tk()
+    root_func.title('Список клиентов')
+
     # ---------------------------create table------------------------
     columns = ("#1", "#2", "#3")
-    table = ttk.Treeview(prod_root, columns=columns, show='headings')
+    table = ttk.Treeview(root_func, columns=columns, show='headings')
     table.pack(fill=BOTH, expand=1)
 
     table.heading("#1", text="id клиента", anchor=W)
@@ -222,5 +229,3 @@ connection = psycopg2.connect(dbname='tr_bog',
 
 cursor = connection.cursor()  # create cursor
 
-
-# close all
